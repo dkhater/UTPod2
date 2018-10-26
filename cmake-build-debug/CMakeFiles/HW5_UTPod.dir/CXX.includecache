@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Neha/Desktop/UTPod/UtPod/Song.h
+cstdlib
+-
+iostream
+-
+string
+-
+
+/Users/Neha/Desktop/UTPod/UtPod/UtPod.h
+cstdlib
+-
+iostream
+-
+Song.h
+/Users/Neha/Desktop/UTPod/UtPod/Song.h
+
+/Users/Neha/Desktop/UTPod/UtPod/utPod_driver.cpp
+cstdlib
+-
+iostream
+-
+fstream
+-
+string
+-
+Song.h
+/Users/Neha/Desktop/UTPod/UtPod/Song.h
+UtPod.h
+/Users/Neha/Desktop/UTPod/UtPod/UtPod.h
+
