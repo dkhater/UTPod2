@@ -26,7 +26,6 @@ class Song
         string title;
         int songSize;
 
-
     public:
         Song();
         Song(string, string, int);

@@ -144,8 +144,8 @@ void UtPod::sortSongList() {                     // Check if song overload opera
             }
             checkPtr = checkPtr->next;           // check next node until null (end of list)
         }
-        swapSongs(sortedPtr,lowest);                // Swap current w/ lowest
-        sortedPtr = sortedPtr->next;             // Move to next position
+        swapSongs(sortedPtr,lowest);               // Swap current w/ lowest
+        sortedPtr = sortedPtr->next;              // Move to next position
     }
 
 }
@@ -154,6 +154,15 @@ int UtPod::getRemainingMemory() {
     int currentMem = getTotalMemory();
     return MAX_MEMORY-currentMem;
 
+}
+
+void UtPod::clearMemory() {
+    while(songs != NULL){
+        SongNode* temp;
+        temp = songs;
+        songs = temp->next;
+        delete(temp);
+    }
 }
 
 int UtPod::getTotalMemory(){
@@ -179,11 +188,6 @@ int UtPod::getNumSongsInUtPod(){
 }
 
 UtPod::~UtPod(){
-    while(songs != NULL){
-        SongNode* temp;
-        temp = songs;
-        songs = temp->next;
-        delete(temp);
-    }
-    //cout << "All clear" << endl;              //For debugging purposes
+    clearMemory();
+    // cout << "All clear" << endl;              //For debugging purposes
 }
