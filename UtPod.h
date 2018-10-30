@@ -82,8 +82,8 @@ public:
     /* FUNCTION - void showSongList
        * prints the current list of songs in order from first to last to standard output
        * format - Title, Artist, size in MB (one song per line)
-         input parms -
-         output parms -
+         input parameters -
+         output parameters -
     */
     void showSongList();
 
