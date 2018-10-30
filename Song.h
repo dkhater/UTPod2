@@ -1,6 +1,6 @@
-//
-// Created by Neha S on 10/18/18.
-//
+// Neha Shah and Dalia Khater
+// Lab 5 - UTPod
+
 
 #include <cstdlib>
 #include <iostream>
@@ -13,7 +13,8 @@ using namespace std;
 
 #endif //HW5_UTPOD_SONG_H
 
-//DOCUMENT HERE
+//This is the song class. The functions in song class either set or get the artist, title, or song size.
+//The comparison for songs (operator overloads) are also here.
 
 #ifndef SONG_H
 #define SONG_H
@@ -27,9 +28,10 @@ class Song
         int songSize;
 
     public:
-        Song();
+        Song();                                 // These are the constructors (default and with parameters)
         Song(string, string, int);
-        void setArtist(string);
+
+        void setArtist(string);                 // These are the public song class functions
         void setTitle(string);
         void setSize(int);
         string getArtist() const;
@@ -41,7 +43,5 @@ class Song
         bool operator ==(Song const &rhs);
 
 };
-
-
 
 #endif

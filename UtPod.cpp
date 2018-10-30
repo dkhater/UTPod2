@@ -1,4 +1,5 @@
-//Utpod.cpp
+// Neha Shah and Dalia Khater
+// Lab 5 - UTPod
 
 #include <cstdlib>
 #include <iostream>
@@ -79,7 +80,7 @@ int UtPod::removeSong(Song const &s) {          // This searches through for a s
 
 void UtPod::shuffle() {
     //This shuffles twice the size
-    int shuffleTimes = 2*getNumSongsInUtPod();                 //Changing this number for testing purposes
+    int shuffleTimes = 2*getNumSongsInUtPod();             //Changing this number for testing purposes
     int ptr1position, ptr2position;
     SongNode* ptr1 = songs;
     SongNode* ptr2 = songs;
@@ -113,7 +114,7 @@ void UtPod::showSongList() {
     else{
         SongNode* ptr = songs;
         while(ptr != nullptr){
-            cout << ptr->s.getArtist()<< ", " << ptr->s.getTitle() << endl;
+            cout << ptr->s.getTitle()<< ", " << ptr->s.getArtist() << ", " << ptr->s.getSize() << " MB" << endl;
             ptr = ptr->next;
         }
     }

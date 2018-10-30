@@ -1,3 +1,6 @@
+// Neha Shah and Dalia Khater
+// Lab 5 - UTPod
+
 #include <cstdlib>
 #include <iostream>
 #include <string>
@@ -41,7 +44,7 @@ int Song::getSize() const{
     return songSize;
 }
 
-bool Song::operator >(Song const &rhs)  //May need to transform from current string to all lowercase or all upper
+bool Song::operator >(Song const &rhs)
 {
     if(this->artist > rhs.artist){
         return true;
@@ -70,7 +73,7 @@ bool Song::operator >(Song const &rhs)  //May need to transform from current str
     }
 
 }
-bool Song::operator <(Song const &rhs) //May need to transform from current string to all lowercase or all upper
+bool Song::operator <(Song const &rhs)
 {
     if(this->artist < rhs.artist){
         return true;

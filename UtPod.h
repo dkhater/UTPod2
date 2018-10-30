@@ -1,6 +1,6 @@
-//
-// Created by Neha S on 10/18/18.
-//
+// Neha Shah and Dalia Khater
+// Lab 5 - UTPod
+
 #include <cstdlib>
 #include <iostream>
 
@@ -12,23 +12,21 @@ using namespace std;
 
 #endif //HW5_UTPOD_UTPOD_H
 
-//DOCUMENT HERE
+//This is UtPod.h which declares the UtPod class all all the functions/variables associated with it.
 
 #ifndef UTPOD_H
 #define UTPOD_H
 #include "Song.h"
 
 //UtPod class declaration
-class UtPod
-{
+class UtPod {
 private:
     static const int MAX_MEMORY = 512;
     static const int SUCCESS = 0;
     static const int NO_MEMORY = -1;
     static const int NOT_FOUND = -2;
 
-    struct SongNode
-    {
+    struct SongNode {
         Song s;
         SongNode *next;
     };
@@ -37,7 +35,7 @@ private:
 
     int memSize;
 
-    void swapSongs(SongNode* ptr1, SongNode* ptr2);
+    void swapSongs(SongNode *ptr1, SongNode *ptr2);
 
 public:
     //Default constructor
@@ -66,53 +64,61 @@ public:
        * removes the first instance of a song that is in the the UtPod multiple times
            o returns 0 if successful
            o returns -1 if nothing is removed
-         input parameters -
-         output parameters -
+         input parameters - which song to remove?
+         output parameters - song is removed, previous node points to next node, memory is free
     */
     int removeSong(Song const &s);
 
     /* FUNCTION - void shuffle
        *  shuffles the songs into random order
           o will do nothing if there are less than two songs in the current list
-         input parameters -
-         output parameters -
+         input parameters - none
+         output parameters - nothing returned, but song list is shuffled by 2*(number of songs in list) times
       */
     void shuffle();
 
     /* FUNCTION - void showSongList
        * prints the current list of songs in order from first to last to standard output
        * format - Title, Artist, size in MB (one song per line)
-         input parameters -
-         output parameters -
+         input parameters - none
+         output parameters - prints the title of the song, then the artist, then the size in MB; no return
     */
     void showSongList();
 
     /* FUNCTION - void sortSongList
        *  sorts the songs in ascending order
           o will do nothing if there are less than two songs in the current list
-         input parms -
-         output parms -
+         input parameters - none
+         output parameters -  no return, rearranges the song list alphabetically based on artist, title, and ascending numbers
     */
-
     void sortSongList();
 
     /* FUNCTION - void clearMemory
    * clears all the songs from memory
-     input parms -  no input, just checks if head is
-     output parms - clears all the songs, does not return anything
+     input parameters -  no input, just checks if head is
+     output parameters - clears all the songs, does not return anything
   */
     void clearMemory();
 
-    int getTotalMemory(); // We changed this
+    /* FUNCTION - int getTotalMemory
+    *  returns the amount of memory used
+    input parameters - none
+    output parameters - returns the amount of memory used in current Utpod
+    */
+    int getTotalMemory();
 
     /* FUNCTION - int getRemainingMemory
      *  returns the amount of memory available for adding new songs
-    input parms -
-    output parms -
+    input parameters - none
+    output parameters - returns the amount of memory left
     */
-
     int getRemainingMemory();
 
+    /* FUNCTION - int getNumSongsInUtPod
+     *  returns the number of songs in the utpod
+    input parameters - none
+    output parameters - returns the number of nodes in the linked list
+    */
     int getNumSongsInUtPod();
 
     ~UtPod();

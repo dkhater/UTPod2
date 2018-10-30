@@ -1,37 +1,60 @@
 Show
 
+Shuffle
+
+Show
+
+Add
+Beatles
+Yellow Submarine
+250
+Show
+Shuffle
+Show
+
+Add
+Beatles
+Yesterday
+5
+Show
+
+Shuffle
+Show
+
+Add
+Beatles
+Here comes the sun
+5
+
+Add
+Beatles
+Come together
+5
+
 Add
 Beatles
 Hey Jude1
-250
-Show
+5
 
 Add
 Beatles
 Hey Jude2
-5
-Show
+150
 
 Add
 Beatles
 Hey Jude3
-5
-Show
+150
 
 Add
 Beatles
-Hey Jude4
+Come together2
 5
-Show
 
 Shuffle
 
 Show
 
-Sort
-
-Show
-
 Remove
 Beatles
 Hey Jude3
@@ -41,8 +64,9 @@ Show
 Remove
 Beatles
 Hey Jude2
-5
+150
 Show
+
 
 
 

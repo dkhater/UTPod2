@@ -1,5 +1,5 @@
-//UTPod_driver
-//change
+// Neha Shah and Dalia Khater
+// Lab 5 - UTPod
 
 #include <cstdlib>
 #include <iostream>
@@ -32,8 +32,8 @@ int main(int argc, char *argv[]) {
     UtPod t;
     string cmd;
     ifstream myfile;
-    //myfile.open(argv[1]);
-    myfile.open("Input.txt");
+    myfile.open(argv[1]);
+    //myfile.open("Input.txt");
 
     if (myfile.is_open()){
 
